@@ -38,9 +38,26 @@ basert på registreringsnummeret til bilen
 */
 
 dealership.RemoveCar("EL23555");
+dealership.RemoveCar("AB12345");
+
 /*
-En metode som returnerer en liste over alle biler som er mer enn X år gamle
-En metode som returnerer en liste over alle biler som har kjørt mer enn Y kilometer
+En metode som returnerer en liste over alle biler som er 
+mer enn X år gamle
+*/
+
+var oldCars = dealership.GetOlderCars(5);
+
+/*
+En metode som returnerer en liste over alle biler som har 
+kjørt mer enn Y kilometer
+*/
+
+var longDrivingCars = 
+    dealership.GetLongDrivingCars(20000);
+var longDrivingCars2 =
+    dealership.GetLongDrivingCars(90000);
+
+/*
 
 Eks. på kode som skal fungere med klassene:
 

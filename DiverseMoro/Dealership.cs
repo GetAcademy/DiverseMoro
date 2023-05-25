@@ -1,4 +1,6 @@
-﻿namespace DiverseMoro
+﻿using System.Text.RegularExpressions;
+
+namespace DiverseMoro
 {
     internal class Dealership
     {
@@ -16,6 +18,32 @@
             var text = "Hei på deg";
             int index = text.IndexOf('k');
             int? number = null;
+        }
+
+        public List<Car> GetLongDrivingCars(int minKilometers)
+        {
+            var longDrivingCars = new List<Car>();
+            foreach (var car in _cars)
+            {
+                if (car.Kilometers > minKilometers) longDrivingCars.Add(car);
+            }
+            return longDrivingCars;
+        }
+
+        public List<Car> GetOlderCars(int age)
+        {
+            var olderCars = new List<Car>();
+            foreach (var car in _cars)
+            {
+                if (car.Age > age) olderCars.Add(car);
+            }
+
+            return olderCars;
+        }
+
+        public void RemoveCar(Car car)
+        {
+            RemoveCar(car.RegNo);
         }
 
         public void RemoveCar(string regNo)

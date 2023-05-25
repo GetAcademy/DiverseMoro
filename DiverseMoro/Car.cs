@@ -6,6 +6,7 @@
         public string RegNo { get; }
         public int ModelYear { get; }
         public int Kilometers { get; private set; }
+        public int Age => DateTime.Now.Year - ModelYear;
 
         public Car(string name, string regNo, int modelYear, int kilometers)
         {
@@ -21,5 +22,6 @@
                 throw new ArgumentOutOfRangeException();
             Kilometers += kilometers;
         }
+
     }
 }
