@@ -27,7 +27,18 @@ En liste av biler (List<Bil>)
 
 Implementer følgende funksjonalitet i bilforhandler-klassen:
 En metode som legger til en bil i listen over biler
-    En metode som fjerner en bil fra listen over biler, basert på registreringsnummeret til bilen
+*/
+var dealership = new Dealership(
+    "Ærlige Harrys bilbutikk", 
+    "Veien 1");
+dealership.AddCar(car);
+/*
+En metode som fjerner en bil fra listen over biler, 
+basert på registreringsnummeret til bilen
+*/
+
+dealership.RemoveCar("EL23555");
+/*
 En metode som returnerer en liste over alle biler som er mer enn X år gamle
 En metode som returnerer en liste over alle biler som har kjørt mer enn Y kilometer
 
